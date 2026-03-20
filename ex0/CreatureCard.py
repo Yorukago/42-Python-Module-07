@@ -1,4 +1,4 @@
-from .Card import Card
+from Card import Card
 
 
 class CreatureCard(Card):
@@ -15,7 +15,6 @@ class CreatureCard(Card):
         self.health = health
 
     def play(self, game_state: dict) -> dict:
-        """Implementation of the abstract method from Card."""
         return {
             "card_played": self.name,
             "mana_used": self.cost,
@@ -23,7 +22,6 @@ class CreatureCard(Card):
         }
 
     def attack_target(self, target_name: str) -> dict:
-        """Specific ability only creatures have."""
         return {
             "attacker": self.name,
             "target": target_name,
@@ -32,7 +30,6 @@ class CreatureCard(Card):
         }
 
     def get_card_info(self) -> dict:
-        """Override info to include attack and health."""
         info = super().get_card_info()
         info.update({
             "type": "Creature",

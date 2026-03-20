@@ -1,12 +1,12 @@
-from ex0.CreatureCard import CreatureCard
+from CreatureCard import CreatureCard
 
 
 def main():
-    print("=== DataDeck Card Foundation ===")
+    print("=== DataDeck Card Foundation ===\n")
 
     dragon = CreatureCard("Fire Dragon", 5, "Legendary", 7, 5)
 
-    print("Testing Abstract Base Class Design:")
+    print("Testing Abstract Base Class Design:\n")
     print(f"CreatureCard Info:\n{dragon.get_card_info()}")
 
     print(f"\nPlaying {dragon.name} with 6 mana available:")
